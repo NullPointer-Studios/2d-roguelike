@@ -1,0 +1,1 @@
+Reusable logic scripts. You can also keep scripts beside scenes, which is fine early on, might get complicated later on
