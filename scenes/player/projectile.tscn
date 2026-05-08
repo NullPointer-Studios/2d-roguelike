@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://8kmlm21365rq"]
+
+[ext_resource type="Script" uid="uid://db03vig3742xf" path="res://scripts/player/projectile.gd" id="1_c28ns"]
+[ext_resource type="Texture2D" uid="uid://ovgp8w6ieliv" path="res://assets/sprites/projectiles/gray.PNG" id="1_xebok"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xebok"]
+
+[node name="Projectile" type="CharacterBody2D" unique_id=865362079]
+scale = Vector2(0.9971394, 1.0041878)
+script = ExtResource("1_c28ns")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=969808774]
+position = Vector2(0, -4.7683716e-07)
+scale = Vector2(1, 0.9919355)
+texture = ExtResource("1_xebok")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1192067565]
+position = Vector2(0, -1.7806822e-07)
+scale = Vector2(0.7543634, 0.73124784)
+shape = SubResource("CircleShape2D_xebok")
