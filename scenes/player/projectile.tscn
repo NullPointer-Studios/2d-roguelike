@@ -7,6 +7,8 @@
 
 [node name="Projectile" type="CharacterBody2D" unique_id=865362079]
 scale = Vector2(0.9971394, 1.0041878)
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("1_c28ns")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=969808774]
