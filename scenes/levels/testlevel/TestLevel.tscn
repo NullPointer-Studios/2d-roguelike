@@ -8,8 +8,6 @@
 [node name="Player" parent="." unique_id=700881268 instance=ExtResource("1_3tr84")]
 position = Vector2(-174, 6)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=734989035]
-
 [node name="Obstacle" parent="." unique_id=214921270 instance=ExtResource("2_ffprf")]
 position = Vector2(1, 109)
 

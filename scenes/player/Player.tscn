@@ -16,3 +16,6 @@ shape = SubResource("RectangleShape2D_gfjak")
 position = Vector2(-1.2814999e-06, -5.9604645e-08)
 scale = Vector2(0.90625, 0.921875)
 texture = ExtResource("2_gfjak")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=603731864]
+position_smoothing_enabled = true
