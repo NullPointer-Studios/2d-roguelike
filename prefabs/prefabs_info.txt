@@ -1,0 +1,1 @@
+reusable mini-scenes like coins, bullets, keys and stuff goes here

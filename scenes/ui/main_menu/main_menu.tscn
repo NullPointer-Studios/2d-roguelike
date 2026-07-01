@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://bxkjpx8vg6022"]
+
+[ext_resource type="Script" uid="uid://d34kduswe1jke" path="res://scenes/ui/main_menu/main_menu.gd" id="1_e8t4i"]
+[ext_resource type="Script" uid="uid://dgawesqfyyiti" path="res://scenes/ui/main_menu/MenuSwapperButton.gd" id="2_qt1dd"]
+[ext_resource type="PackedScene" uid="uid://drkc06mld0c2w" path="res://scenes/levels/testlevel/TestLevel.tscn" id="2_r70wa"]
+[ext_resource type="Script" uid="uid://dag77usdq7xxt" path="res://scenes/ui/main_menu/settings_scene.gd" id="4_cmwxi"]
+
+[node name="MainMenu" type="Control" unique_id=37046912]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e8t4i")
+test_level = ExtResource("2_r70wa")
+
+[node name="MenuScene" type="PanelContainer" parent="." unique_id=851580766]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -260.0
+offset_right = 256.0
+offset_bottom = 252.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainMenuContainer" type="VBoxContainer" parent="MenuScene" unique_id=151728611]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MenuScene/MainMenuContainer" unique_id=1182556940]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Game Name"
+horizontal_alignment = 1
+
+[node name="PlayButton" type="Button" parent="MenuScene/MainMenuContainer" unique_id=1124069157]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Start Game"
+
+[node name="SkillTreeButton" type="Button" parent="MenuScene/MainMenuContainer" unique_id=901991260]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Skill Tree
+"
+
+[node name="SettingsButton" type="Button" parent="MenuScene/MainMenuContainer" unique_id=148294577 node_paths=PackedStringArray("switchToNode", "currentNode")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Settings"
+script = ExtResource("2_qt1dd")
+switchToNode = NodePath("../../../SettingsScene")
+currentNode = NodePath("../..")
+
+[node name="QuitButton" type="Button" parent="MenuScene/MainMenuContainer" unique_id=1495564424]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Quit
+"
+
+[node name="SettingsScene" type="PanelContainer" parent="." unique_id=788793387]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_cmwxi")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsScene" unique_id=875205939]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SettingsScene/VBoxContainer" unique_id=1638935845]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="masterVolume" type="Label" parent="SettingsScene/VBoxContainer" unique_id=913391731]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Master Volume"
+
+[node name="volSlide1" type="HSlider" parent="SettingsScene/VBoxContainer" unique_id=1526397763]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="musicVolume" type="Label" parent="SettingsScene/VBoxContainer" unique_id=580357433]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Music Volume"
+
+[node name="volSlide2" type="HSlider" parent="SettingsScene/VBoxContainer" unique_id=787964905]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="sfxVolume" type="Label" parent="SettingsScene/VBoxContainer" unique_id=184189972]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "SFX Volume"
+
+[node name="volSlide3" type="HSlider" parent="SettingsScene/VBoxContainer" unique_id=1061278166]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="fullScreen" type="Label" parent="SettingsScene/VBoxContainer" unique_id=709702450]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Full Screen"
+
+[node name="toggleFullscreen" type="CheckBox" parent="SettingsScene/VBoxContainer" unique_id=245579572]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+
+[node name="Back" type="Button" parent="SettingsScene/VBoxContainer" unique_id=1071654190]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Back"
+
+[connection signal="swapMenuRequest" from="MenuScene/MainMenuContainer/SettingsButton" to="." method="swap_menu_request"]
