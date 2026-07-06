@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
 #preloads the scene at compile time
 const PROJECTILE_SCENE := preload("res://scenes/player/projectile.tscn")

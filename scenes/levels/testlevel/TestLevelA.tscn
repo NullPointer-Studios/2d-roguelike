@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://drkc06mld0c2w"]
+
+[ext_resource type="PackedScene" uid="uid://baf6ncdlv0s80" path="res://scenes/player/Player.tscn" id="1_3tr84"]
+[ext_resource type="Script" uid="uid://e5q8e8gfj0nj" path="res://scenes/levels/testlevel/test_level_a.gd" id="1_dem15"]
+[ext_resource type="Script" uid="uid://d2twddvsis7uq" path="res://scenes/levels/testlevel/tile_change.gd" id="2_o8ofp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dem15"]
+
+[node name="TestLevel" type="Node2D" unique_id=1287587128]
+script = ExtResource("1_dem15")
+
+[node name="Player" parent="." unique_id=700881268 instance=ExtResource("1_3tr84")]
+position = Vector2(95, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=734989035]
+
+[node name="tile_change" type="Area2D" parent="." unique_id=1269692762]
+script = ExtResource("2_o8ofp")
+dest = "res://scenes/levels/testlevel/TestLevelB.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tile_change" unique_id=1009819399]
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_dem15")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=946193304]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -411.0
+offset_top = -208.0
+offset_right = -361.0
+offset_bottom = -158.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(4.3317675e-07, 0.43083328, 0.43138036, 1)
+
+[node name="TextEdit" type="TextEdit" parent="ColorRect" unique_id=2089882586]
+layout_mode = 0
+offset_right = 50.0
+offset_bottom = 50.0
+text = "A"
+
+[connection signal="body_entered" from="tile_change" to="tile_change" method="_on_body_entered"]

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://by75ij4muwwix"]
+
+[ext_resource type="Script" uid="uid://b4tfe1v0cl53b" path="res://scenes/levels/testlevel/test_level_b.gd" id="1_xl433"]
+
+[node name="TestLevel" type="Node2D" unique_id=1287587128]
+script = ExtResource("1_xl433")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=734989035]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=145227508]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -411.0
+offset_top = -208.0
+offset_right = -361.0
+offset_bottom = -158.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(4.3317675e-07, 0.43083328, 0.43138036, 1)
+
+[node name="TextEdit" type="TextEdit" parent="ColorRect" unique_id=589211468]
+layout_mode = 0
+offset_right = 50.0
+offset_bottom = 50.0
+text = "B"
