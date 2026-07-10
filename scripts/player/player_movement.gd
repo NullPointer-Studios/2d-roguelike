@@ -14,6 +14,4 @@ func _physics_process(_delta):
 	input_direction = input_direction.normalized()
 	velocity = input_direction * move_speed
 	
-	print("input:", input_direction, " velocity:", velocity, " position:", position)
-	
 	move_and_slide()

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://de1x3hvv6kpfl"]
+
+[ext_resource type="Script" uid="uid://mjv4nl22o8oi" path="res://scripts/test level scripts/room_generation.gd" id="1_f7lwe"]
+[ext_resource type="PackedScene" uid="uid://bvodtakdc68x" path="res://scenes/levels/test scene 1/ObstaclesSpawn.tscn" id="2_hbnjm"]
+
+[node name="SmallRoom" type="Node2D" unique_id=674560761]
+
+[node name="RoomGeneration" type="Node2D" parent="." unique_id=1306373212]
+script = ExtResource("1_f7lwe")
+
+[node name="ObstacleSpawn" parent="." unique_id=1943073621 instance=ExtResource("2_hbnjm")]

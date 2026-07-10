@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bkhdpqwf5pw2a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u6228"]
+size = Vector2(384, 96)
+
+[node name="HorizontalRock" type="StaticBody2D" unique_id=201126445]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1185756799]
+shape = SubResource("RectangleShape2D_u6228")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=193840447]
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(192, 48, -192, 48, -192, -48, 192, -48)

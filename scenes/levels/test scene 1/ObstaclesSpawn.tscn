@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bvodtakdc68x"]
+
+[node name="ObstacleSpawn" type="Node2D" unique_id=1943073621]
+
+[node name="ObsA" type="Marker2D" parent="." unique_id=1919556091]
+position = Vector2(960, 256)
+
+[node name="ObsB" type="Marker2D" parent="." unique_id=892589555]
+position = Vector2(320, 544)
+
+[node name="ObsC" type="Marker2D" parent="." unique_id=1062229922]
+position = Vector2(1600, 544)
+
+[node name="ObsD" type="Marker2D" parent="." unique_id=2127946745]
+position = Vector2(960, 832)
