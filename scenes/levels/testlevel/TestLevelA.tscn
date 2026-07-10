@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://drkc06mld0c2w"]
 
-[ext_resource type="PackedScene" uid="uid://baf6ncdlv0s80" path="res://scenes/player/Player.tscn" id="1_3tr84"]
+[ext_resource type="PackedScene" uid="uid://8kmlm21365rq" path="res://scenes/player/projectile.tscn" id="1_3tr84"]
 [ext_resource type="Script" uid="uid://e5q8e8gfj0nj" path="res://scenes/levels/testlevel/test_level_a.gd" id="1_dem15"]
 [ext_resource type="PackedScene" uid="uid://bhbm3tbe2cam3" path="res://prefabs/tile_change.tscn" id="3_dem15"]
 

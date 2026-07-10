@@ -15,14 +15,14 @@ run/main_scene="uid://de1x3hvv6kpfl"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+scene_manager="*uid://bon8j64euiu81"
+
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-
-[autoload]
-
-scene_manager="*uid://bon8j64euiu81"
 
 [dotnet]
 
