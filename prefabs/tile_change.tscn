@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bhbm3tbe2cam3"]
+
+[ext_resource type="Script" uid="uid://d2twddvsis7uq" path="res://scenes/levels/testlevel/tile_change.gd" id="1_u7uad"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dem15"]
+
+[node name="tile_change" type="Area2D" unique_id=1513494106]
+script = ExtResource("1_u7uad")
+dest = "res://scenes/levels/testlevel/TestLevelB.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=971302296]
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_dem15")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

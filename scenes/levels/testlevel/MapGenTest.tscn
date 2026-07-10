@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bvke7cy1a8mqj"]
+
+[ext_resource type="Script" uid="uid://bq6kuxt8fyx0m" path="res://scripts/map_gen.gd" id="1_ep7iv"]
+[ext_resource type="Script" uid="uid://bsna1fbhwpqo4" path="res://scripts/noise_gen.gd" id="2_36q22"]
+[ext_resource type="Texture2D" uid="uid://btm8fsi6gsouu" path="res://icon.svg" id="2_t1xwm"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5qvt7"]
+texture = ExtResource("2_t1xwm")
+texture_region_size = Vector2i(4, 4)
+12:9/0 = 0
+6:6/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2tbie"]
+tile_size = Vector2i(4, 4)
+sources/0 = SubResource("TileSetAtlasSource_5qvt7")
+
+[node name="MapGenTest" type="Node2D" unique_id=699774395]
+script = ExtResource("1_ep7iv")
+
+[node name="TileMap" type="TileMap" parent="." unique_id=391419110]
+tile_set = SubResource("TileSet_2tbie")
+format = 2
+layer_0/tile_data = PackedInt32Array(131073, 65536, 1, 196609, 65536, 1, 262145, 65536, 1, 327680, 65536, 1, 393216, 65536, 1, 393217, 65536, 1, 327681, 65536, 1, 327682, 65536, 1, 262146, 65536, 1, 196610, 65536, 1, 131074, 65536, 1, 262147, 65536, 1, 196611, 65536, 1, 196614, 262144, 2, 262150, 262144, 2, 327686, 262144, 2, 393223, 262144, 2, 327687, 262144, 2, 262151, 262144, 2, 196615, 262144, 2, 131078, 262144, 2, 65542, 262144, 2, 5, 262144, 2, 65541, 262144, 2, 131077, 262144, 2, 196613, 262144, 2, 196616, 262144, 2, 131080, 262144, 2, 65544, 262144, 2, 65543, 262144, 2, 262149, 262144, 2)
+script = ExtResource("2_36q22")

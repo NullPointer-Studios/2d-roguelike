@@ -1,3 +1,9 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+#(machine-specific)
+addons/godot-git-plugin/win64/~*.dll
+
+# JetBrains IDE
+.idea/
